@@ -215,27 +215,27 @@ footer a:hover {
 /* Social Icons Styling */
 .social-icons {
     display: inline-flex;
-    gap: 1.5rem; /* Space between the icons */
+    gap: 2rem; /* Space between the icons */
 }
 
 .social-link {
-    font-size: 1.5rem; /* Icon size */
-    color: #000; /* Icon color */
-    text-decoration: none;
+    font-size: 2rem; /* Increased icon size */
+    color: #000; /* Ensure the icon color is black */
+    text-decoration: none; /* Remove underline */
     transition: color 0.3s ease;
 }
 
 .social-link:hover {
-    color: #0077b5; /* Optional: change color on hover (LinkedIn blue as an example) */
+    color: #0077b5; /* Optional: LinkedIn blue on hover */
 }
 
 /* Optional: Circle background for icons */
 .social-link i {
-    padding: 0.5rem;
-    border-radius: 50%;
-    border: 1px solid #ccc;
-    width: 2.5rem;
-    height: 2.5rem;
+    padding: 0.75rem; /* Adjust padding to fit new size */
+    border-radius: 50%; /* Circle shape */
+    border: 1px solid #ccc; /* Optional border */
+    width: 3rem; /* Adjust width to make icons larger */
+    height: 3rem; /* Adjust height */
     display: inline-flex;
     justify-content: center;
     align-items: center;
@@ -243,5 +243,5 @@ footer a:hover {
 }
 
 .social-link:hover i {
-    background-color: #f0f0f0; /* Change background color on hover */
+    background-color: #f0f0f0; /* Background color change on hover */
 }
