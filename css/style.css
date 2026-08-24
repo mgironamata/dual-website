@@ -127,7 +127,8 @@ section h2 {
     text-align: center;
 }
 
-.grid-item:hover .overlay {
+.grid-item:hover .overlay,
+.grid-item .overlay.always-visible {
     opacity: 1;
 }
 
