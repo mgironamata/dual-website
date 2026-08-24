@@ -127,8 +127,13 @@ section h2 {
     text-align: center;
 }
 
-.grid-item:hover .overlay {
+.grid-item:hover .overlay,
+.grid-item .overlay.always-visible {
     opacity: 1;
+}
+
+.grid-item:has(.overlay.always-visible) {
+    background: #000;
 }
 
 .overlay h3 {
@@ -139,6 +144,27 @@ section h2 {
 .overlay p {
     margin: 0;
     font-size: 1rem;
+}
+
+/* Responsive grid: single column on narrow viewports; auto height for always-visible cards */
+@media (max-width: 600px) {
+    .grid {
+        grid-template-columns: 1fr;
+    }
+
+    .grid-item:has(.overlay.always-visible) {
+        height: auto;
+        padding-top: 0;
+    }
+
+    .grid-item:has(.overlay.always-visible) .overlay.always-visible {
+        position: static;
+        padding: 1rem;
+    }
+
+    .grid-item:has(.overlay.always-visible) img {
+        display: none;
+    }
 }
 
 /* Contact Form */
