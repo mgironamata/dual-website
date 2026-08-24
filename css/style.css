@@ -132,6 +132,10 @@ section h2 {
     opacity: 1;
 }
 
+.grid-item:has(.overlay.always-visible) {
+    background: #000;
+}
+
 .overlay h3 {
     margin-bottom: 0.5rem;
     font-size: 1.5rem;
