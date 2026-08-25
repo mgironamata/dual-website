@@ -173,6 +173,7 @@ section h2 {
     .grid-item--colour .overlay {
         position: static;
         opacity: 1;
+        background: rgba(0, 0, 0, 0.35);
         padding: 1rem;
     }
 }
