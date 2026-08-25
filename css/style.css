@@ -1,6 +1,16 @@
 /* Import Google Font for fallback (Helvetica Neue is typically a system font) */
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap');
 
+/* Company colour palette */
+:root {
+    --color-teal:      #2a9d8f;
+    --color-amber:     #e9c46a;
+    --color-rust:      #c1440e;
+    --color-slate:     #457b9d;
+    --color-sage:      #6a8c69;
+    --color-ochre:     #d4a04a;
+}
+
 /* Basic reset */
 * {
     margin: 0;
@@ -127,14 +137,17 @@ section h2 {
     text-align: center;
 }
 
-.grid-item:hover .overlay,
-.grid-item .overlay.always-visible {
+.grid-item:hover .overlay {
     opacity: 1;
 }
 
-.grid-item:has(.overlay.always-visible) {
-    background: #000;
-}
+/* Coloured background items (Projects & Services) */
+.grid-item--teal   { background: var(--color-teal); }
+.grid-item--amber  { background: var(--color-amber); }
+.grid-item--rust   { background: var(--color-rust); }
+.grid-item--slate  { background: var(--color-slate); }
+.grid-item--sage   { background: var(--color-sage); }
+.grid-item--ochre  { background: var(--color-ochre); }
 
 .overlay h3 {
     margin-bottom: 0.5rem;
@@ -146,24 +159,21 @@ section h2 {
     font-size: 1rem;
 }
 
-/* Responsive grid: single column on narrow viewports; auto height for always-visible cards */
+/* Responsive grid: single column on narrow viewports; auto height for colour-background cards */
 @media (max-width: 600px) {
     .grid {
         grid-template-columns: 1fr;
     }
 
-    .grid-item:has(.overlay.always-visible) {
+    .grid-item--colour {
         height: auto;
         padding-top: 0;
     }
 
-    .grid-item:has(.overlay.always-visible) .overlay.always-visible {
+    .grid-item--colour .overlay {
         position: static;
+        opacity: 1;
         padding: 1rem;
-    }
-
-    .grid-item:has(.overlay.always-visible) img {
-        display: none;
     }
 }
 
